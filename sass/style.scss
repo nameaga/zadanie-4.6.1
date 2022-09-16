@@ -20,19 +20,17 @@ body {
   line-height: 1.7;
   font-family: "Inconsolata", sans-serif; }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 20px;
-  align-items: center;
+.top {
+  background-image: url('https://images.pexels.com/photos/4452374/pexels-photo-4452374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  padding: 0;
 }
-
 section {
   padding: 96px; }
 .vertical-container {
   display: -webkit-flex;
   display:         flex;
   -webkit-align-items: center;
+  
 }
 .btn {
   display: inline-block;
@@ -61,10 +59,12 @@ section {
 
 nav{
   width: 100%;
+  max-height:fit-content;
+  align-items:center;
 }
-.col-8{
+.navbar-nav{
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 ul {
   padding: 0;
@@ -109,7 +109,6 @@ display: block;
   display: flex;
   height: 70vh;
   position: relative;
-  background-image: url('https://images.pexels.com/photos/4452374/pexels-photo-4452374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -153,9 +152,9 @@ display: block;
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   text-align: center;
   flex: 0 0 50%;
+  align-items:center;
   
 }
 .box {
@@ -169,12 +168,12 @@ display: block;
   text-align: center;
   
 }
-.box{
+.box{  
   i{
     font-size: 40px;
     border-color: $color-one;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     line-height: 50px;
     color: $color-one;
     border-radius: 50%;
@@ -211,7 +210,6 @@ display: block;
   height: 300px;
   object-fit: cover; 
 }
-
 .cards {
   position: relative;
   flex-wrap: wrap;
@@ -260,9 +258,7 @@ footer {
   .section-title {
     font-size: 24px;
   }
-  .page-title {
-    font-size: 10px;
-  }
+ 
    section {
     padding: 20px;
   }
@@ -271,6 +267,7 @@ footer {
   }
   .row{
     flex-direction: column;
+    
   }
   div.splash-inner{
     margin:15px 30px
@@ -285,14 +282,18 @@ footer {
 /* Media */
 
 @media (max-width: 767px) and (max-width: 991px) {
-  .section-title {
+  
+    .section-title {
     font-size: 24px;
     margin: 0 0 30px;
     }
 
   .page-title {
-    font-size: 60px; 
+    font-size: 40px; 
     }
+  .page-subtitle {
+        font-size: 25px; 
+        }
 
   .box-title {
     font-size: 24px; 
@@ -303,7 +304,7 @@ footer {
     }
 
   div.splash-inner {
-    margin: 15px 30px; 
+    margin: 0; 
     }
 
   .page-footer {
@@ -315,5 +316,6 @@ footer {
     }
   .navigation li {
     margin-right: 16px; 
+    flex-wrap: wrap;
     }
 }
